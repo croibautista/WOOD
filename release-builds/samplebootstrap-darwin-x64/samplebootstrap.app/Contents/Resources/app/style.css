@@ -1,0 +1,89 @@
+.wood_logo {
+  width: 180px;
+  float: left;
+  /* margin: 5px 5px 5px 25px; */
+}
+
+.nav-buttons-left {
+  float: left;
+  display: inline-block;
+  vertical-align: middle;
+  width: 300px;
+  height: 50%;
+  margin-top: 17px;
+  position: relative;
+  margin-left: 15px;
+}
+
+.nav-buttons-right {
+  float: right;
+  display: inline-block;
+  vertical-align: middle;
+  width: 400px;
+  height: 50%;
+  margin-top: 17px;
+  position: relative;
+}
+
+.red_bg {
+  position: relative;
+  background-color: #ba2231;
+  width: 100%;
+  height: 117px;
+  margin-top: -20px;
+}
+
+/* #btn1, #btn2, #btn3, #btn4, #btn5 {} */
+
+.btn-primary {
+  border-radius: 24px;
+  font-weight: 700;
+  background-color: #eee;
+  border-color: #D3D3D3;
+  color: #99494e;
+  /*set the color you want here*/
+}
+
+.btn-primary:hover,.btn-primary:focus, .btn-primary.active ,.open>.dropdown-toggle.btn-primary {
+  border-radius: 24px;
+  font-weight: 700;
+  color: #fff;
+  background-color: #ba2231 !important;
+  border-color: #D3D3D3 !important;
+  box-shadow: none !important;
+  outline: none !important;
+  /*set the color you want here*/
+}
+
+
+#btnSearch {
+  font-weight: 700;
+}
+
+/* CUSTOM HEADER COLOR */
+
+.modal-header-danger {
+	color:#fff;
+    padding:9px 15px;
+    border-bottom:1px solid #eee;
+    background-color: #d9534f;
+    -webkit-border-top-left-radius: 5px;
+    -webkit-border-top-right-radius: 5px;
+    -moz-border-radius-topleft: 5px;
+    -moz-border-radius-topright: 5px;
+     border-top-left-radius: 5px;
+     border-top-right-radius: 5px;
+}
+
+.addShadow{
+  text-shadow: 1px 2px #000;
+}
+
+
+/* CUSTOM MODAL */
+
+
+.modal-ku {
+  width: 420px;
+  margin: auto;
+}

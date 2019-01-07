@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title> WOOD TEST APP </title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="style.css">
+
+  <script src="node_modules/jquery/dist/jquery.min.js"></script>
+  <!-- <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script> -->
+</head>
+
+<body>
+
+  <nav class="navbar navbar-default navbar-static-top">
+
+    <div class="container-fluid">
+      <img id="wood_logo" class="wood_logo" src="img/wood-logo.svg" alt="wood-logo">
+
+      <div class="nav-buttons-left">
+
+        <div class="input-group">
+          <span class="input-group-addon">
+            <span class="glyphicon glyphicon-search"></span>
+          </span>
+          <input type="text" class="form-control" placeholder="Enter Keywords">
+          <span class="input-group-btn">
+            <button id="btnSearch" class="btn btn-danger" type="button">Search</button>
+
+            <button id="myDropdown" type="button" class="btn dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              <span class="caret"></span>
+            </button>
+            <ul class="dropdown-menu">
+              <h3>FILTER YOUR SEARCH</h3>
+              <li><a href="#">Action</a></li>
+              <li><a href="#">Another action</a></li>
+              <li><a href="#">Something else here</a></li>
+              <li role="separator" class="divider"></li>
+              <li><a href="#">Separated link</a></li>
+            </ul>
+          </span>
+        </div><!-- /input-group -->
+      </div>
+      <div class="nav-buttons-right">
+        <button id="btn1" type="button" class="btn btn-primary">Home</button>
+        <button id="btn2" type="button" class="btn btn-primary" data-toggle="modal" data-target="#modal_bookmark">Bookmarks</button>
+        <button id="btn3" type="button" class="btn btn-primary" data-toggle="modal" data-target="#modal_Option">Option</button>
+        <button id="btn4" type="button" class="btn btn-primary" title="ABOUT THIS ARCHIVE" data-container="body" data-toggle="modal" data-target="#about_modal">About</button>
+        <button id="btn5" type="button" class="btn btn-primary" data-toggle="modal" data-target="#helpModal">Help</button>
+      </div>
+    </div>
+  </nav>
+
+
+  <div class="red_bg">
+  </div>
+  <script src="node_modules/jquery/dist/jquery.min.js"></script>
+  <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+
+  <script>
+    $(document).ready(function(){
+            $('[data-toggle="popover"]').popover();
+
+            //Hide popover when clicking outside
+            $(document).on('click', function (e) {
+              $('[data-toggle="popover"],[data-original-title]').each(function () {
+                  //the 'is' for buttons that trigger popups
+                  //the 'has' for icons within a button that triggers a popup
+                  if (!$(this).is(e.target) && $(this).has(e.target).length === 0 && $('.popover').has(e.target).length === 0) {
+                      (($(this).popover('hide').data('bs.popover')||{}).inState||{}).click = false  // fix for BS 3.3.6
+                  }
+
+              });
+          });
+        });
+</script>
+
+  <!-- Modal ABOUT -->
+  <div class="modal fade" id="about_modal" style="top: 38px;" role="dialog">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content" style="background-color: #eee">
+        <div class="modal-header modal-header-danger">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title addShadow">ABOUT THIS ARCHIVE <span style="float:right; margin-right:10px;">2.2.1</span></h4>
+        </div>
+        <div class="modal-body" style="background-color: #eee">
+          <div class="container-fluid" style="background-color: #fff">
+            <p style="font-weight: 700; margin-top: 10px;">
+              Welcome to the WOOD® magazine back issue archive. This massive collection is printer-friendly, fully searchable, and contains high-quality illustrations and photos.
+              <br>
+              <br>The archive features:
+              <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Issues searchable by any term or topic
+              <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Thumbnail previews of each article or project
+              <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Articles and issues browsable by year, issue, or article type
+              <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Mac and PC compatibility
+              <br>
+              <br>These magazines are presented as they were published, often many years ago. As such, any offers, sources, kits, products, buying guides, reviews, and information from advertisers may be out-of-date, defunct, or invalid. WOOD®
+              magazine does not keep updated sourcing information.
+
+              <br>Notice: Reproduction or distribution of the content of this product is strictly prohibited. Purchase of this product does not transfer any title or rights of ownership in the content to the purchaser. The content of this product is
+              protected by copyright and may not be used for any other purpose without the written permission of the copyright owner.
+              <br>
+              <br>© Copyright Meredith Corporation 2018. All rights reserved. Produced in the USA.</p>
+          </div>
+
+        </div>
+        <!-- <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div> -->
+      </div>
+
+    </div>
+  </div>
+  <!-- Modal ABOUT -->
+
+
+
+  <!-- Modal  BOOKMARKS -->
+  <div class="modal fade" id="modal_bookmark" style="top: 69px;" role="dialog">
+    <div class="modal-dialog modal-ku">
+      <div class="modal-content" style="background-color: #eee">
+        <div class="modal-header modal-header-danger addShadow">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">MY BOOKMARKS</h4>
+        </div>
+        <div class="container-fluid" style="padding: 15px;">
+          <button type="button" class="btn btn-primary"><span class="glyphicon glyphicon-plus-sign"></span> Add</button>
+          <button type="button" class="btn btn-primary" disabled><span class="glyphicon glyphicon-minus-sign"></span> Delete</button>
+          <button type="button" class="btn btn-primary"><span class="glyphicon glyphicon-pencil"></span> Rename</button>
+          <button type="button" class="btn btn-primary"><span class="glyphicon glyphicon-folder-open"></span> New folder</button>
+        </div>
+        <div class="modal-body">
+          <p style="font-weight: 700"></p>
+          <div class="" style="width:380px; height: 300px; background-color: #fff; margin: 0 auto; border: 1px solid black;">
+
+          </div>
+        </div>
+        <!-- <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div> -->
+      </div>
+
+    </div>
+  </div>
+  <!-- Modal BOOKMARKS -->
+
+
+  <!-- Modal  OPTION -->
+  <div class="modal fade" id="modal_Option" style="top: 38px;" role="dialog">
+    <div class="modal-dialog modal-sm">
+      <div class="modal-content" style="background-color: #eee">
+        <div class="modal-header modal-header-danger addShadow">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">OPTIONS</h4>
+        </div>
+        <div class="modal-body" style="color:#ba2231">
+          <div class="checkbox">
+            <label><input type="checkbox" value="" checked>Animate Page flipping</label>
+          </div>
+          <div class="checkbox">
+            <label><input type="checkbox" value="" checked>Always open document in full screen</label>
+          </div>
+          <div class="checkbox disabled">
+            <label><input type="checkbox" value="">Hide Shadow</label>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-primary" data-dismiss="modal">Cancel</button>
+          <button type="button" class="btn btn-danger" style="border-radius: 24px;" data-dismiss="modal">Save</button>
+        </div>
+      </div>
+
+    </div>
+  </div>
+  <!-- Modal OPTION -->
+
+</body>
+
+</html>
