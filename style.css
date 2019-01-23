@@ -1,95 +1,98 @@
 .wood_logo {
-  width: 180px;
-  float: left;
-  cursor: pointer;
-  /* margin: 5px 5px 5px 25px; */
+    width: 180px;
+    float: left;
+    cursor: pointer;
+    /* margin: 5px 5px 5px 25px; */
 }
 
 .nav-buttons-left {
-  /* float: left; */
-  display: inline-block;
-  vertical-align: middle;
-  width: 300px;
-  height: 50%;
-  margin-top: 17px;
-  position: relative;
-  margin-left: 15px;
+    /* float: left; */
+    display: inline-block;
+    vertical-align: middle;
+    width: 300px;
+    height: 50%;
+    margin-top: 17px;
+    position: relative;
+    margin-left: 15px;
 }
 
 .nav-buttons-right {
-  float: right;
-  /* display: inline-block; */
-  vertical-align: middle;
-  width: 400px;
-  height: 50%;
-  margin-top: 17px;
-  position: relative;
+    float: right;
+    /* display: inline-block; */
+    vertical-align: middle;
+    width: 400px;
+    height: 50%;
+    margin-top: 17px;
+    position: relative;
 }
 
 .red_bg {
-  position: relative;
-  background-color: #ba2231;
-  width: 100%;
-  height: 117px;
-  margin-top: -20px;
+    position: relative;
+    background-color: #ba2231;
+    width: 100%;
+    height: 117px;
+    margin-top: -20px;
 }
 
 .pdfContainerStand {
-  position: relative;
-  background-color: #000;
-  opacity: .15;
-  width: 100%;
-  margin: 0 auto;
-  height: 900px;
-  margin-top: -56px;
-  border-radius: 20px;
-  border: 2px solid white;
+    position: relative;
+/*    background-color: #000;*/
+/*    opacity: .15;*/
+    width: 100%;
+    margin: 0 auto;
+    height: 900px;
+    margin-top: -56px;
+    border-radius: 20px;
+    border: 2px solid white;
 }
 
 /* #btn1, #btn2, #btn3, #btn4, #btn5 {} */
 
 .btn-primary {
-  border-radius: 24px;
-  font-weight: 700;
-  background-color: #eee;
-  border-color: #D3D3D3;
-  color: #99494e;
-  /*set the color you want here*/
+    border-radius: 24px;
+    font-weight: 700;
+    background-color: #eee;
+    border-color: #D3D3D3;
+    color: #99494e;
+    /*set the color you want here*/
 }
 
-.btn-primary:hover,.btn-primary:focus, .btn-primary.active ,.open>.dropdown-toggle.btn-primary {
-  /* border-radius: 24px; */
-  font-weight: 700;
-  color: #fff;
-  background-color: #ba2231 !important;
-  border-color: #D3D3D3 !important;
-  box-shadow: none !important;
-  outline: none !important;
-  /*set the color you want here*/
+.btn-primary:hover,
+.btn-primary:focus,
+.btn-primary.active,
+.open > .dropdown-toggle.btn-primary {
+    /* border-radius: 24px; */
+    font-weight: 700;
+    color: #fff;
+    background-color: #ba2231 !important;
+    border-color: #D3D3D3 !important;
+    box-shadow: none !important;
+    outline: none !important;
+    /*set the color you want here*/
 }
 
 
 #btnSearch {
-  font-weight: 700;
+    font-weight: 700;
 }
 
 /* CUSTOM HEADER COLOR */
 
 .modal-header-danger {
-	color:#fff;
-    padding:9px 15px;
-    border-bottom:1px solid #eee;
+    color: #fff;
+    padding: 9px 15px;
+    border-bottom: 1px solid #eee;
     background-color: #d9534f;
     -webkit-border-top-left-radius: 5px;
     -webkit-border-top-right-radius: 5px;
     -moz-border-radius-topleft: 5px;
     -moz-border-radius-topright: 5px;
-     border-top-left-radius: 5px;
-     border-top-right-radius: 5px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
 }
 
-.addShadow{
-  text-shadow: 1px 2px #000;
+.addShadow {
+    text-shadow: 1px 2px #000;
 }
 
 
@@ -97,94 +100,150 @@
 
 
 .modal-ku {
-  width: 420px;
-  margin: auto;
+    width: 420px;
+    margin: auto;
 }
 
 /* Custom List */
 
-#myForm{
-  left: -196px !important;
-  width: 302px;
-  padding: 10px;
-  background-color: #eee;
-  color: #99494e;
-  margin: auto;
+#myForm {
+    left: -196px !important;
+    width: 302px;
+    padding: 10px;
+    background-color: #eee;
+    color: #99494e;
+    margin: auto;
 }
 
 
 /* custom Glyphicons color */
 
-.setColor{
-  color: #F0E68C;
+.setColor {
+    color: #F0E68C;
 }
 
 
-.btn-pill-left{
-  border-radius: 500px 0 0 500px;
+.btn-pill-left {
+    border-radius: 500px 0 0 500px;
 
 }
-.btn-pill-right{
-  border-radius: 0 500px 500px 0;
+
+.btn-pill-right {
+    border-radius: 0 500px 500px 0;
 }
 
 
 /* CUSTOM HOME Button*/
 
 .btn-default {
-  border-radius: 24px;
-  font-weight: 700;
-  background-color: #ae1f2d;
-  border-color: #1e0507;
-  color: #fff;
-  /*set the color you want here*/
+    border-radius: 24px;
+    font-weight: 700;
+    background-color: #ae1f2d;
+    border-color: #1e0507;
+    color: #fff;
+    /*set the color you want here*/
 }
 
-.btn-default:hover,.btn-default:focus, .btn-default.active ,.open>.dropdown-toggle.btn-default {
-  /* border-radius: 24px; */
-  color: #ffc24b;
-  background-color: #ba2231 !important;
-  border-color: #1e0507 !important;
-  box-shadow: none !important;
-  outline: none !important;
-  /*set the color you want here*/
+.btn-default:hover,
+.btn-default:focus,
+.btn-default.active,
+.open > .dropdown-toggle.btn-default {
+    /* border-radius: 24px; */
+    color: #ffc24b;
+    background-color: #ba2231 !important;
+    border-color: #1e0507 !important;
+    box-shadow: none !important;
+    outline: none !important;
+    /*set the color you want here*/
 }
 
-#modal_Option{
-   position: absolute;
-   top: 10px;
-   right: 100px;
-   bottom: 0;
-   left: 0;
-   z-index: 10040;
-   /* overflow: auto;
+#modal_Option {
+    position: absolute;
+    top: 10px;
+    right: 100px;
+    bottom: 0;
+    left: 0;
+    z-index: 10040;
+    /* overflow: auto;
    overflow-y: auto; */
 }
 
-.table-hover tbody tr:hover td, .table-hover tbody tr:hover th {
-  background-color: #f6c8cb;
+.table-hover tbody tr:hover td,
+.table-hover tbody tr:hover th {
+    background-color: #f6c8cb;
 }
 
 
 .popover {
-  top: 41px !important;
-  left: 208px !important;
-  max-width: 310px;
-}
-.popover > .arrow{
-display: none;
+    top: 41px !important;
+    left: 208px !important;
+    max-width: 310px;
 }
 
-.popover-content{
-  left: -196px;
-  width: 302px;
-  padding: 10px;
-  background-color: #eee;
-  color: #99494e;
-  margin: auto;
+.popover > .arrow {
+    display: none;
 }
 
-#articleSub{
-  width: 280px;
-  border: #000 1px solid;
+.popover-content {
+    left: -196px;
+    width: 302px;
+    padding: 10px;
+    background-color: #eee;
+    color: #99494e;
+    margin: auto;
+}
+
+#articleSub {
+    width: 280px;
+    border: #000 1px solid;
+}
+
+/*----------------->>>>>>>> BOOKSHELF <<<<<<<------------------*/
+
+.book {
+	padding: 15px 0 0 0;
+	margin: auto;
+}
+a:before { /* Just to give a little puddle of a shadow without adding another element */
+	content: '';
+    display: block;
+    width: 80%;
+    height: 1em;
+    background: rgba(0,0,0,.35);
+    border-radius: 50%;
+    position: absolute;
+    bottom:-10px;
+    -webkit-filter: blur(5px);
+    filter: blur(5px);
+    z-index:-5;
+}
+.shelf {
+	border-bottom: 30px solid #c19a6b;
+    border-left: 20px solid transparent;
+    border-right: 20px solid transparent;
+	top: -15px;
+	z-index: -10;
+}
+/*Example adding pseudo element to give shelf depth*/
+.shelf:after {
+	content: '';
+	background: #9c7541;
+	height: 5px;
+	width: calc(100% + 40px); /*IE9+*/
+	position: absolute;
+	top: 30px;
+	left: 0;
+	right: 0;
+	z-index: 1;
+	margin: 0 -20px;
+}
+
+.bgBlack {
+    position: absolute;
+    background-color: #000;
+    opacity: .10;
+    width: 100%;
+    margin: 0 auto;
+    height: 100%;
+    border-radius: 20px;
 }
