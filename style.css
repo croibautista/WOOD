@@ -43,7 +43,7 @@
     height: 900px;
     margin-top: -56px;
     border-radius: 20px;
-    border: 2px solid white;
+    border: 1px solid transparent;
 }
 
 /* #btn1, #btn2, #btn3, #btn4, #btn5 {} */
@@ -241,9 +241,14 @@ a:before { /* Just to give a little puddle of a shadow without adding another el
 .bgBlack {
     position: absolute;
     background-color: #000;
-    opacity: .10;
+    opacity: .2;
     width: 100%;
     margin: 0 auto;
     height: 100%;
     border-radius: 20px;
+}
+
+.navbar-default{
+      background-color: #fff;
+
 }

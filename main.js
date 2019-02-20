@@ -43,7 +43,10 @@ app.on('ready', function() {
 
   // if main window is ready to show, then destroy the splash window and show up the main window
       mainWindow.once('ready-to-show', function() {
-        splash.destroy();
+        setTimeout(function(){
+          splash.destroy();
+        }, 2000);
+
         mainWindow.show();
       });
   // Quit app when closed.

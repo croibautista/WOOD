@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="utf-8">
+    <title> WOOD ARCHIVE</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+
+    <script src="node_modules/jquery/dist/jquery.min.js"></script>
+</head>
+
+<body>
+
+    <nav class="navbar navbar-default navbar-static-top">
+
+        <div class="container-fluid">
+            <img id="wood_logo" class="wood_logo" src="img/wood-logo.svg" alt="wood-logo">
+
+            <div class="nav-buttons-left">
+
+                <div class="input-group">
+                    <span class="input-group-addon">
+                        <span class="glyphicon glyphicon-search"></span>
+                    </span>
+                    <input type="text" class="form-control" placeholder="Enter Keywords" onfocus="this.placeholder=''">
+                    <span class="input-group-btn">
+                        <button id="btnSearch" class="btn btn-danger" type="button">Search</button>
+
+                        <button style=" background-color: #eee;" id="myDropdown" type="button" class="btn" data-container="body">
+                            <span class="caret"></span>
+                        </button>
+
+                        <div id="myForm" class="hide container">
+                            <h4>FILTER YOUR SEARCH</h4>
+                            <form action="">
+                                <label class="radio-inline"><input type="radio" name="radio1"> Exact match</label>
+                                <label class="radio-inline"><input type="radio" name="radio1"> or</label>
+                                <label class="radio-inline"><input type="radio" name="radio1"> and</label>
+                                <br>
+                                <label><input type="checkbox" value="" checked> Title and Sub Title</label>
+                                <label><input type="checkbox" value="" checked> Keywords</label>
+                                <br>
+                                <label><input type="checkbox" value=""> Full Text </label>
+
+
+                                <br>
+                                <label data-target="#articleSub" aria-expanded="false" aria-controls="articleSub"><input type="checkbox" value=""> Article Type </label>
+
+                                <div id="articleSub" aria-expanded="false" class="container collapse">
+                                    <ul class="list-group">
+                                        <li class="list-group-item">Pictures</li>
+                                        <li class="list-group-item">Documents</li>
+                                        <li class="list-group-item">Music</li>
+                                        <li class="list-group-item">Videos</li>
+                                    </ul>
+                                </div>
+
+                                <br>
+                                <label><input type="checkbox" value=""> Project Type </label>
+
+                                <br>
+                                <label>Date range
+                                    <select id="year"></select>
+                                    to
+                                    <select id="year2"></select>
+                                </label>
+                                <br><br>
+                                <button type="button" class="btn btn-danger">Reset</button>
+                            </form>
+                        </div>
+
+                    </span>
+                </div><!-- /input-group -->
+            </div>
+
+            <div class="nav-buttons-right">
+                <button id="btn1" type="button" class="btn btn-primary">Home</button>
+                <button id="btn2" type="button" class="btn btn-primary" data-toggle="modal" data-target="#modal_bookmark">Bookmarks</button>
+                <button id="btn3" type="button" class="btn btn-primary" data-toggle="modal" data-target="#modal_Option">Option</button>
+                <button id="btn4" type="button" class="btn btn-primary" title="ABOUT THIS ARCHIVE" data-container="body" data-toggle="modal" data-target="#about_modal">About</button>
+                <button id="btn5" type="button" class="btn btn-primary" data-toggle="modal" data-target="#modal_Help">Help</button>
+            </div>
+        </div>
+    </nav>
+
+    <div class="red_bg"></div>
+    <div class="container-fluid">
+        <div class="pdfContainerStand">
+            <div id="container" class="bgBlack"></div>
+             <div class="container" style="margin-top: 64px">
+                <div class="row">
+                    <div class="col-xs-4 col-md-2">
+                        <a href=""><img src="./img/thumb_1.jpg" class="img-responsive book"></a>
+                    </div>
+                    <div class="col-xs-4 col-md-2">
+                        <a href=""><img src="./img/thumb_2.jpg" class="img-responsive book"></a>
+                    </div>
+                    <div class="col-xs-4 col-md-2">
+                        <a href=""><img src="./img/thumb_3.jpg" class="img-responsive book"></a>
+                    </div>
+                    <div class="col-xs-12 shelf hidden-md hidden-lg"></div>
+                    <div class="col-xs-4 col-md-2">
+                        <a href=""><img src="./img/thumb_4.jpg" class="img-responsive book"></a>
+                    </div>
+                    <div class="col-xs-4 col-md-2">
+                        <a href=""><img src="./img/thumb_5.jpg" class="img-responsive book"></a>
+                    </div>
+                    <div class="col-xs-4 col-md-2">
+                        <a href=""><img src="./img/thumb_6.jpg" class="img-responsive book"></a>
+                    </div>
+                    <div class="col-xs-12 shelf"></div>
+                    <div class="col-xs-4 col-md-2">
+                        <a href=""><img src="./img/thumb_7.jpg" class="img-responsive book"></a>
+                    </div>
+                    <div class="col-xs-4 col-md-2">
+                        <a href=""><img src="./img/thumb_8.jpg" class="img-responsive book"></a>
+                    </div>
+                    <div class="col-xs-4 col-md-2">
+                        <a href=""><img src="./img/thumb_9.jpg" class="img-responsive book"></a>
+                    </div>
+                    <div class="col-xs-12 shelf hidden-md hidden-lg"></div>
+                    <div class="col-xs-4 col-md-2">
+                        <a href=""><img src="./img/thumb_10.jpg" class="img-responsive book"></a>
+                    </div>
+                    <div class="col-xs-4 col-md-2">
+                        <a href=""><img src="./img/thumb_5.jpg" class="img-responsive book"></a>
+                    </div>
+                    <div class="col-xs-4 col-md-2">
+                        <a href=""><img src="./img/thumb_8.jpg" class="img-responsive book"></a>
+                    </div>
+                    <div class="col-xs-12 shelf"></div>
+                </div>
+            </div>
+            
+        </div>
+        <div class="container-fluid" style="position: relative; top: -888px;">
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="btn-group">
+                        <button type="button" class="btn btn-default btn-pill-left"><i class="glyphicon glyphicon-th-large"></i>
+                            Thumbnail</button>
+                        <button type="button" class="btn btn-default btn-pill-right"><i class="glyphicon glyphicon-th-list"></i>
+                            List view</button>
+                    </div>
+                </div>
+                <div class="col-md-4 text-center">
+                    <h5 style="color: #fff; font-weight: 700;">Results</h5>
+                </div>
+                <div class="col-md-4">
+                    <!-- Split button -->
+                    <div class="btn-group" style="float: right;">
+                        <button type="button" class="btn btn-default">Issue(Newest First)</button>
+                        <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <span class="caret"></span>
+                            <span class="sr-only">Toggle Dropdown</span>
+                        </button>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">Issue(Newest First)</a></li>
+                            <li><a href="#">Issue(Oldest First)</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Modal ABOUT -->
+    <div class="modal fade" id="about_modal" style="top: 38px;" role="dialog">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content" style="background-color: #eee">
+                <div class="modal-header modal-header-danger">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h5 class="modal-title addShadow">ABOUT THIS ARCHIVE <span style="float:right; margin-right:10px;">2.2.1</span></h5>
+                </div>
+                <div class="modal-body" style="background-color: #eee">
+                    <div class="container-fluid" style="background-color: #fff">
+                        <p style="font-weight: 400; margin-top: 10px;">
+                            Welcome to the WOOD® magazine back issue archive. This massive collection is printer-friendly, fully
+                            searchable, and contains high-quality illustrations and photos.
+                            <br>
+                            <br>The archive features:
+                            <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Issues searchable by any term or topic
+                            <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Thumbnail previews of each article or project
+                            <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Articles and issues browsable by year, issue, or article
+                            type
+                            <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Mac and PC compatibility
+                            <br>
+                            <br>These magazines are presented as they were published, often many years ago. As such, any offers,
+                            sources, kits, products, buying guides, reviews, and information from advertisers may be out-of-date,
+                            defunct, or invalid. WOOD®
+                            magazine does not keep updated sourcing information.
+
+                            <br>Notice: Reproduction or distribution of the content of this product is strictly prohibited. Purchase
+                            of this product does not transfer any title or rights of ownership in the content to the purchaser. The
+                            content of this product is
+                            protected by copyright and may not be used for any other purpose without the written permission of the
+                            copyright owner.
+                            <br>
+                            <br>© Copyright Meredith Corporation 2018. All rights reserved. Produced in the USA.</p>
+                    </div>
+
+                </div>
+                <!-- <div class="modal-footer">
+              <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div> -->
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Modal  BOOKMARKS -->
+    <div class="modal fade" id="modal_bookmark" style="top: 69px;" role="dialog">
+        <div class="modal-dialog modal-ku">
+            <div class="modal-content" style="background-color: #eee">
+                <div class="modal-header modal-header-danger addShadow">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h5 class="modal-title">MY BOOKMARKS</h5>
+                </div>
+                <div class="container-fluid" style="padding: 15px;">
+                    <button type="button" class="btn btn-primary"><span class="glyphicon glyphicon-plus-sign"></span> Add</button>
+                    <button type="button" class="btn btn-primary" disabled><span class="glyphicon glyphicon-minus-sign"></span>
+                        Delete</button>
+                    <button type="button" class="btn btn-primary"><span class="glyphicon glyphicon-pencil"></span> Rename</button>
+                    <button type="button" class="btn btn-primary"><span class="glyphicon glyphicon-folder-open"></span> New
+                        folder</button>
+                </div>
+                <div class="modal-body">
+                    <p style="font-weight: 700"></p>
+                    <div class="" style="width:380px; height: 300px; background-color: #fff; margin: 0 auto; border: 1px solid black;">
+
+                    </div>
+                </div>
+                <!-- <div class="modal-footer">
+              <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div> -->
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Modal  OPTION -->
+    <div class="modal" id="modal_Option" style="top: 38px;" role="dialog" data-backdrop="false" data-keyboard="true">
+        <div class="modal-dialog modal-sm">
+            <div class="modal-content" style="background-color: #eee">
+                <div class="modal-header modal-header-danger addShadow">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h5 class="modal-title">OPTIONS</h5>
+                </div>
+                <div class="modal-body" style="color:#ba2231">
+                    <div class="checkbox">
+                        <label><input type="checkbox" value="" checked>Animate Page flipping</label>
+                    </div>
+                    <div class="checkbox">
+                        <label><input type="checkbox" value="" checked>Always open document in full screen</label>
+                    </div>
+                    <div class="checkbox">
+                        <label><input type="checkbox" value="">Hide Shadow</label>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" data-dismiss="modal">Cancel</button>
+                    <button type="button" class="btn btn-danger" style="border-radius: 24px;" data-dismiss="modal">Save</button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <!-- Modal  HELP -->
+    <div class="modal fade" id="modal_Help" style="top: 38px;" role="dialog">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content" style="background-color: #eee">
+                <div class="modal-header modal-header-danger addShadow">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h5 class="modal-title">HELP</h5>
+                </div>
+                <div class="modal-body">
+                    <div class="" style="border: 1px solid black; width: 23%;">
+
+
+                        <table class="table table-hover table-borderless text-left col-md-*" style="width: 100%;">
+
+                            <tbody>
+                                <tr>
+                                    <td><span class="glyphicon glyphicon-file"></span> System Requirements</td>
+                                </tr>
+                                <tr>
+                                    <td><span class="glyphicon glyphicon-file"></span> Mac</td>
+                                </tr>
+                                <tr>
+                                    <td><span class="glyphicon glyphicon-file"></span> Windows</td>
+                                </tr>
+
+                                <tr>
+                                    <td><span class="glyphicon glyphicon-folder-close setColor"></span> Installation</td>
+                                </tr>
+
+                                <tr>
+                                    <td><span class="glyphicon glyphicon-file"></span> Main Menu</td>
+                                </tr>
+
+                                <tr>
+                                    <td><span class="glyphicon glyphicon-file"></span> Reading Options</td>
+                                </tr>
+
+                                <tr>
+                                    <td><span class="glyphicon glyphicon-file"></span> Main Navigation</td>
+                                </tr>
+
+                                <tr>
+                                    <td><span class="glyphicon glyphicon-folder-close setColor"></span> Search Panel</td>
+                                </tr>
+                                <tr>
+                                    <td><span class="glyphicon glyphicon-file"></span> Searching within an Issue</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <!-- <div class="modal-footer">
+          <button type="button" class="btn btn-primary" data-dismiss="modal">Cancel</button>
+          <button type="button" class="btn btn-danger" style="border-radius: 24px;" data-dismiss="modal">Save</button>
+        </div> -->
+            </div>
+
+        </div>
+    </div>
+
+    <div class="container-fluid">
+        <div class="row-fluid" style="margin-top:200px">
+        </div>
+    </div>
+
+
+    <script src="node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="navFunction.js"></script>
+</body>
+
+</html>
